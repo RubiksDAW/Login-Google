@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Primera App Firebase</title>
+  </head>
+  <body>
+    <div id="app">
+      <button id="login">Iniciar sesión Google</button>
+      <button id="button-logout">Cerrar sesión</button>
+      <form id="todo-form" class="hidden">
+        <div id="user-info"></div>
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Nueva tarea..."
+          autocomplete="off"
+        />
+      </form>
+
+      <div id="todos-container"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: 'AIzaSyCqyArgj7KdvwpMeLS5_gfMjOxMOt2ndYU',
+
+        authDomain: 'todo-list-6ebfe.firebaseapp.com',
+
+        projectId: 'todo-list-6ebfe',
+
+        storageBucket: 'todo-list-6ebfe.appspot.com',
+
+        messagingSenderId: '816229595748',
+
+        appId: '1:816229595748:web:e41dfa325f5b8dfeb1bd71',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
